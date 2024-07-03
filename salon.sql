@@ -50,7 +50,8 @@ SET default_table_access_method = heap;
 CREATE TABLE public.appointments (
     appointment_id integer NOT NULL,
     service_id integer NOT NULL,
-    customer_id integer NOT NULL
+    customer_id integer NOT NULL,
+    "time" character varying(10) NOT NULL
 );
 
 
@@ -184,7 +185,11 @@ ALTER TABLE ONLY public.services ALTER COLUMN service_id SET DEFAULT nextval('pu
 -- Data for Name: services; Type: TABLE DATA; Schema: public; Owner: freecodecamp
 --
 
-
+INSERT INTO services VALUES (1, 'cut');
+INSERT INTO services VALUES (2, 'color');
+INSERT INTO services VALUES (3, 'perm');
+INSERT INTO services VALUES (4, 'style');
+INSERT INTO services VALUES (5, 'trim');
 
 --
 -- Name: appointments_appointment_id_seq; Type: SEQUENCE SET; Schema: public; Owner: freecodecamp
